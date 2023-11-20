@@ -37,28 +37,26 @@ export default function Welcome({ auth }) {
                         <div className="flex hidden w-full mx-auto mobile-menu lg:block" id="navigation">
                             <div className="flex flex-col items-baseline justify-between mx-auto mt-6 lg:flex-row lg:items-center lg:mt-0">
                                 <div className="flex flex-col w-full text-base font-normal text-white lg:flex-row lg:w-max lg:pl-4">
-                                    <a href="#" className="py-3 pl-2 mx-2 lg:mr-9 lg:pl-0 hover:opacity-70">Home</a>
+                                    <a href={ route('welcome') } className="py-3 pl-2 mx-2 lg:mr-9 lg:pl-0 hover:opacity-70">Home</a>
                                     <a href="#maps" className="py-3 pl-2 mx-2 lg:mr-9 lg:pl-0 hover:opacity-70">Maps</a>
                                     <a href="#" className="py-3 pl-2 mx-2 lg:mr-9 lg:pl-0 hover:opacity-70">Contact</a>
                                 </div>
                                 <div className="flex flex-col lg:flex-row inline-flex gap-4 lg:gap-7 w-full px-3 mt-4 lg:mt-0 lg:w-max lg:px-0">
                                 {auth.user ? (
-                                    <a href="#" className="w-full lg:w-auto px-5 py-3 bg-champ-green text-center rounded-lg flex bg-white lg:mx-auto bg-transparent transition ease-out duration-200 hover:bg-champ-green hover:opacity-30">
+                                    <a href={ route('dashboard') } className="w-full lg:w-auto px-5 py-3 bg-champ-green text-center rounded-lg flex bg-white lg:mx-auto bg-transparent transition ease-out duration-200 hover:bg-champ-green hover:opacity-30">
                                         <span className="text-base w-full font-semibold text-dark-1">Dashboard</span>
                                     </a>
                                 ) : (
-                                    <a href="#" className="w-full lg:w-auto px-5 py-3 bg-champ-green text-center rounded-lg flex bg-white lg:mx-auto bg-transparent transition ease-out duration-200 hover:bg-champ-green hover:opacity-30">
+                                    <a href={ route('login') } className="w-full lg:w-auto px-5 py-3 bg-champ-green text-center rounded-lg flex bg-white lg:mx-auto bg-transparent transition ease-out duration-200 hover:bg-champ-green hover:opacity-30">
                                         <span className="text-base w-full font-semibold text-dark-1">Sign In</span>
                                     </a>
                                 )}
                                 </div>
                             </div>
                         </div>
-
-                        
                     </div>
                 </nav>
-                <main className="py-20 px-4 mt-20 mx-auto max-w-screen-2xl lg:px-24">
+                <main className="py-20 px-4 my-20 mx-auto max-w-screen-2xl lg:px-24">
                     <div className="flex flex-col text-center">
                         <div className="headline font-bold text-5xl text-white leading-normal lg:leading-snug"> Just a Simple Maps
                             <br className="hidden lg:block" /> to Find Location </div>
@@ -78,6 +76,15 @@ export default function Welcome({ auth }) {
                         </div>
                     </div>
                 </main>
+                <div className="relative isolate flex items-center gap-x-6 overflow-hidden bg-dark-2 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
+                    <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                        <p className="text-sm leading-6 text-white">
+                            <strong className="font-semibold">© 2023 MeMap. All rights reserved.</strong>
+                        </p>
+                    </div>
+                    <div className="flex flex-1 justify-end">
+                    </div>
+                </div>
             </section>
         </>
     );
