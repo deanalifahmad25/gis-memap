@@ -60,14 +60,21 @@ export default function Welcome({ auth }) {
                 </nav>
                 <main className="py-20 px-4 mt-20 mx-auto max-w-screen-2xl lg:px-24">
                     <div className="flex flex-col text-center">
-                        <div className="headline font-bold text-5xl text-white leading-normal lg:leading-snug"> Build Your Company
-                            <br className="hidden lg:block" /> From Scratch </div>
+                        <div className="headline font-bold text-5xl text-white leading-normal lg:leading-snug"> Just a Simple Maps
+                            <br className="hidden lg:block" /> to Find Location </div>
                         <div className="mt-5 mb-12">
-                            <p className="font-medium text-sm lg:text-base text-white leading-7"> Learn well from big companies with
-                                our best framework </p>
+                            <p className="font-medium text-sm lg:text-base text-white leading-7"> The simplest GIS that provide information to      help you find location. </p>
                         </div>
                         <div className="mt-20 container mx-auto flex items-center justify-center flex-col" id="maps">
-                            <img className="rounded-md" src="https://imgsrv2.voi.id/HpO09gZIQxpPSpVKdPkkZwaQELHpXUDAgoUw26q-tiA/auto/1200/675/sm/1/bG9jYWw6Ly8vcHVibGlzaGVycy8xNTE4MjMvMjAyMjAzMzEwODA3LW1haW4uSlBH.jpg" alt="" />
+                            <Map
+                                initialViewState={{
+                                    longitude: 107.608238,
+                                    latitude: -6.914864,
+                                    zoom: 12,
+                                }}
+                                style={{ width: "100%", height: 600 }}
+                                mapStyle="https://api.maptiler.com/maps/5fa45fd6-3b7a-488e-9349-4dbbb6b4568d/style.json?key=Kk5Jt6PL6fwFbwwgIDfy"
+                            />
                         </div>
                     </div>
                 </main>
