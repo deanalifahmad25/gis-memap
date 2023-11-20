@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap');
+
+.font-be-vietnam {
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+:root {
+    --dark-1: #08090D;
+    --dark-2: #001D01;
+    --champ-green: #0DDB93;
+    --champ-yellow: #FECF00;
+}
+
+.bg-dark-1 {
+    background-color: var(--dark-1);
+}
+
+.bg-dark-2 {
+    background-image: linear-gradient(to bottom, rgba(31, 29, 43, 1), rgba(39, 37, 53, 1));
+}
+
+.bg-champ-green {
+    background-color: var(--champ-green);
+}
+
+.bg-champ-yellow {
+    background-color: var(--champ-yellow);
+}
+
+.text-dark-1 {
+    color: var(--dark-1);
+}
+
+.text-dark-2 {
+    color: var(--dark-2);
+}
