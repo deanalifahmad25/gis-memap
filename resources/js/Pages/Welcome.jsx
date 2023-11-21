@@ -61,10 +61,11 @@ export default function Welcome({ auth }) {
                         <div className="headline font-bold text-5xl text-white leading-normal lg:leading-snug"> Just a Simple Maps
                             <br className="hidden lg:block" /> to Find Location </div>
                         <div className="mt-5 mb-12">
-                            <p className="font-medium text-sm lg:text-base text-white leading-7"> The simplest GIS that provide information to      help you find location. </p>
+                            <p className="font-medium text-sm lg:text-base text-white leading-7"> The simplest GIS that provide information to help you find location. </p>
                         </div>
                         <div className="mt-20 container mx-auto flex items-center justify-center flex-col" id="maps">
                             <Map
+                                className="rounded-md"
                                 initialViewState={{
                                     longitude: 107.608238,
                                     latitude: -6.914864,
